@@ -29,18 +29,19 @@
       border-radius: 3rem;
       padding: 2rem 2rem 2.5rem;
       box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 215, 100, 0.1);
-      transition: all 0.2s;
+      transition: background 0.3s;
     }
 
-    /* cabeçalho com título interativo */
+    /* cabeçalho */
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid rgba(255, 215, 100, 0.2);
       padding-bottom: 0.75rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.8rem;
       flex-wrap: wrap;
+      gap: 0.5rem;
     }
 
     .header h1 {
@@ -69,10 +70,9 @@
       font-weight: 500;
       border: 1px solid #ffb34740;
       box-shadow: 0 0 12px #ffb34720;
-      backdrop-filter: blur(2px);
     }
 
-    /* container do slide */
+    /* slides */
     .slide-container {
       position: relative;
       min-height: 440px;
@@ -98,7 +98,6 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* parte do texto */
     .text-content {
       flex: 1 1 280px;
       color: #eef3fa;
@@ -108,16 +107,16 @@
       font-size: 2rem;
       font-weight: 500;
       color: #ffdd99;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       border-left: 6px solid #f6b83d;
       padding-left: 1rem;
       text-shadow: 0 2px 3px #00000055;
     }
 
     .text-content p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 1.6;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
       color: #d0dcec;
       background: rgba(0, 0, 0, 0.25);
       padding: 0.8rem 1.2rem;
@@ -142,7 +141,7 @@
       padding: 0.5rem;
       box-shadow: inset 0 8px 20px #00000066, 0 10px 20px #00000040;
       border: 1px solid #ffb34730;
-      transition: all 0.2s;
+      transition: all 0.3s;
     }
 
     .image-area img {
@@ -151,45 +150,21 @@
       border-radius: 28px;
       object-fit: cover;
       box-shadow: 0 6px 18px #00000077;
-      transition: 0.25s;
+      transition: filter 0.25s, transform 0.2s;
       width: 100%;
       height: auto;
     }
 
     .image-area img:hover {
       transform: scale(1.01);
-      filter: brightness(1.1);
     }
 
-    .image-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #aab7d0;
-      font-size: 1.2rem;
-      gap: 8px;
-      padding: 2rem;
-      text-align: center;
-      background: #1f2a3a;
-      border-radius: 30px;
-      width: 100%;
-      height: 100%;
-      min-height: 200px;
-      border: 2px dashed #ffb34740;
-    }
-
-    .image-placeholder span {
-      font-size: 3.5rem;
-      filter: drop-shadow(0 0 10px #f6b83d55);
-    }
-
-    /* controles interativos */
+    /* controles principais */
     .controls {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 2.2rem;
+      margin-top: 2rem;
       gap: 1rem;
       flex-wrap: wrap;
     }
@@ -225,10 +200,6 @@
       box-shadow: 0 0 20px #f6b83d60;
     }
 
-    .nav-btn:active {
-      transform: scale(0.94);
-    }
-
     .dots {
       display: flex;
       gap: 12px;
@@ -254,30 +225,58 @@
       box-shadow: 0 0 20px #f6b83d70;
     }
 
-    .dot:hover {
-      background: #f6b83d80;
-      transform: scale(1.1);
+    /* botões interativos de teste */
+    .interactive-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.2rem;
+      background: #1a2332cc;
+      border-radius: 80px;
+      border: 1px solid #ffb34730;
+      backdrop-filter: blur(4px);
+      justify-content: center;
     }
 
-    .interactive-tip {
-      color: #7b8aa3;
-      font-size: 0.9rem;
-      background: #1a2332;
+    .interactive-toolbar span {
+      color: #bcc9e0;
+      font-size: 0.95rem;
+      margin-right: 6px;
+    }
+
+    .test-btn {
+      background: #2f3b50;
+      border: none;
+      color: #f0f4ff;
       padding: 0.5rem 1.2rem;
       border-radius: 60px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.2s;
+      border: 1px solid #4e5f7a;
+      box-shadow: 0 4px 8px #00000033;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      border: 1px solid #2f3b50;
+      gap: 6px;
     }
 
-    .interactive-tip span {
-      font-size: 1.2rem;
+    .test-btn:hover {
+      background: #f6b83d;
+      color: #0b0e1a;
+      border-color: #f6b83d;
+      transform: scale(1.02);
+      box-shadow: 0 0 16px #f6b83d60;
     }
 
-    /* rodapé */
+    .test-btn:active {
+      transform: scale(0.95);
+    }
+
     .footer {
-      margin-top: 2rem;
+      margin-top: 1.8rem;
       border-top: 1px solid #ffb34720;
       padding-top: 1.2rem;
       display: flex;
@@ -295,118 +294,86 @@
     }
 
     @media (max-width: 700px) {
-      .presentation-card {
-        padding: 1.2rem;
-      }
-      .header h1 {
-        font-size: 1.8rem;
-      }
-      .text-content h2 {
-        font-size: 1.7rem;
-      }
-      .slide {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .image-area {
-        min-height: 180px;
-      }
-      .nav-btn {
-        width: 48px;
-        height: 48px;
-        font-size: 1.5rem;
-      }
+      .presentation-card { padding: 1.2rem; }
+      .header h1 { font-size: 1.8rem; }
+      .text-content h2 { font-size: 1.6rem; }
+      .slide { flex-direction: column; gap: 1rem; }
+      .image-area { min-height: 160px; }
+      .nav-btn { width: 48px; height: 48px; font-size: 1.5rem; }
+      .interactive-toolbar { border-radius: 30px; padding: 0.8rem; }
     }
   </style>
 </head>
 <body>
 
-<div class="presentation-card">
-  <!-- cabeçalho -->
+<div class="presentation-card" id="presentationCard">
   <div class="header">
-    <h1>
-      <span>☀️</span> Luz · Vida
-    </h1>
-    <div class="slide-counter" id="slideCounter">1 / 5</div>
+    <h1><span>☀️</span> Luz · Vida</h1>
+    <div class="slide-counter" id="slideCounter">1 / 8</div>
   </div>
 
-  <!-- slides -->
+  <!-- slides (agora 8) -->
   <div class="slide-container">
-    <!-- SLIDE 1 -->
+    <!-- 1 -->
     <div class="slide active" data-index="0">
-      <div class="text-content">
-        <h2>🌅 A luz que nos acorda</h2>
-        <p class="highlight">Todos os dias, a luz solar regula nosso ritmo biológico. Ela nos dá energia, vitamina D e nos conecta com o ciclo da natureza.</p>
-        <p>🔆 <strong>Interação:</strong> clique nos botões ou nos pontos para navegar.</p>
-      </div>
-      <div class="image-area">
-        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&h=400&fit=crop&crop=center&q=80" alt="Nascer do sol na natureza" loading="lazy">
-      </div>
+      <div class="text-content"><h2>🌅 A luz que nos acorda</h2><p class="highlight">Todos os dias, a luz solar regula nosso ritmo biológico. Ela nos dá energia, vitamina D e nos conecta com o ciclo da natureza.</p><p>🔆 <strong>Interação:</strong> use os botões ou teclas ← →</p></div>
+      <div class="image-area"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&h=400&fit=crop&crop=center&q=80" alt="Nascer do sol" loading="lazy"></div>
     </div>
-
-    <!-- SLIDE 2 -->
+    <!-- 2 -->
     <div class="slide" data-index="1">
-      <div class="text-content">
-        <h2>💡 Luz na tecnologia</h2>
-        <p>Dos LEDs aos monitores, a luz artificial transformou a forma como vivemos. Hoje, 90% das informações chegam até nós através de telas iluminadas.</p>
-        <p>📱 <strong>Interaja:</strong> cada clique revela uma nova perspectiva.</p>
-      </div>
-      <div class="image-area">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop&crop=center&q=80" alt="Circuitos e luzes tecnológicas" loading="lazy">
-      </div>
+      <div class="text-content"><h2>💡 Luz na tecnologia</h2><p>Dos LEDs aos monitores, a luz artificial transformou a forma como vivemos. Hoje, 90% das informações chegam até nós através de telas iluminadas.</p><p>📱 <strong>Interaja:</strong> cada clique revela uma nova perspectiva.</p></div>
+      <div class="image-area"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop&crop=center&q=80" alt="Circuitos e luzes" loading="lazy"></div>
     </div>
-
-    <!-- SLIDE 3 -->
+    <!-- 3 -->
     <div class="slide" data-index="2">
-      <div class="text-content">
-        <h2>🌈 Luz e emoções</h2>
-        <p>A cromoterapia e a iluminação ambiente influenciam nosso humor. Luzes quentes trazem aconchego, frias aumentam a concentração.</p>
-        <p>🎨 <strong>Dica:</strong> observe as cores ao seu redor e sinta o efeito.</p>
-      </div>
-      <div class="image-area">
-        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=400&fit=crop&crop=center&q=80" alt="Arco-íris e cores" loading="lazy">
-      </div>
+      <div class="text-content"><h2>🌈 Luz e emoções</h2><p>A cromoterapia e a iluminação ambiente influenciam nosso humor. Luzes quentes trazem aconchego, frias aumentam a concentração.</p><p>🎨 <strong>Dica:</strong> observe as cores ao seu redor.</p></div>
+      <div class="image-area"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=400&fit=crop&crop=center&q=80" alt="Arco-íris" loading="lazy"></div>
     </div>
-
-    <!-- SLIDE 4 -->
+    <!-- 4 -->
     <div class="slide" data-index="3">
-      <div class="text-content">
-        <h2>🌌 Luz no universo</h2>
-        <p>Estrelas, galáxias e a radiação cósmica nos lembram que somos feitos de poeira estelar. A luz viaja milhões de anos para chegar até nós.</p>
-        <p>🔭 <strong>Explore:</strong> a luz é a mensageira do cosmos.</p>
-      </div>
-      <div class="image-area">
-        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=600&h=400&fit=crop&crop=center&q=80" alt="Galáxia e estrelas" loading="lazy">
-      </div>
+      <div class="text-content"><h2>🌌 Luz no universo</h2><p>Estrelas, galáxias e a radiação cósmica nos lembram que somos feitos de poeira estelar. A luz viaja milhões de anos para chegar até nós.</p><p>🔭 <strong>Explore:</strong> a luz é a mensageira do cosmos.</p></div>
+      <div class="image-area"><img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=600&h=400&fit=crop&crop=center&q=80" alt="Galáxia" loading="lazy"></div>
     </div>
-
-    <!-- SLIDE 5 -->
+    <!-- 5 -->
     <div class="slide" data-index="4">
-      <div class="text-content">
-        <h2>✨ Luz em cada detalhe</h2>
-        <p>Desde o brilho de um vaga-lume até a luz da lua, a presença da luz é poesia na nossa rotina. Ela está em tudo o que vemos.</p>
-        <p>🌟 <strong>Viva a luz:</strong> aprecie cada reflexo.</p>
-      </div>
-      <div class="image-area">
-        <img src="https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=600&h=400&fit=crop&crop=center&q=80" alt="Luz em gotas de orvalho" loading="lazy">
-      </div>
+      <div class="text-content"><h2>✨ Luz em cada detalhe</h2><p>Desde o brilho de um vaga-lume até a luz da lua, a presença da luz é poesia na nossa rotina. Ela está em tudo o que vemos.</p><p>🌟 <strong>Viva a luz:</strong> aprecie cada reflexo.</p></div>
+      <div class="image-area"><img src="https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=600&h=400&fit=crop&crop=center&q=80" alt="Gotas de orvalho" loading="lazy"></div>
+    </div>
+    <!-- 6 (NOVO) -->
+    <div class="slide" data-index="5">
+      <div class="text-content"><h2>🕯️ Luz e espiritualidade</h2><p>Velas, lampadários e fogueiras sempre estiveram presentes em rituais e momentos de reflexão. A luz simboliza esperança e renovação.</p><p>🪔 <strong>Interação:</strong> acenda a luz interior.</p></div>
+      <div class="image-area"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&h=400&fit=crop&crop=center&q=80" alt="Vela acesa" loading="lazy"></div>
+    </div>
+    <!-- 7 (NOVO) -->
+    <div class="slide" data-index="6">
+      <div class="text-content"><h2>🌿 Luz na natureza</h2><p>A fotossíntese é o processo que mantém a vida na Terra. A luz do sol é convertida em energia, oxigênio e alimento para todos os seres.</p><p>🍃 <strong>Conecte-se:</strong> a luz é a base da cadeia alimentar.</p></div>
+      <div class="image-area"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=600&h=400&fit=crop&crop=center&q=80" alt="Floresta com raios de sol" loading="lazy"></div>
+    </div>
+    <!-- 8 (NOVO) -->
+    <div class="slide" data-index="7">
+      <div class="text-content"><h2>🏙️ Luz na cidade</h2><p>As grandes metrópoles nunca dormem graças à iluminação pública e aos letreiros. A luz urbana cria paisagens icônicas e move a economia.</p><p>🌃 <strong>Curiosidade:</strong> cidades como Tóquio e Nova York são famosas por sua iluminação noturna.</p></div>
+      <div class="image-area"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&h=400&fit=crop&crop=center&q=80" alt="Cidade iluminada à noite" loading="lazy"></div>
     </div>
   </div>
 
-  <!-- controles interativos -->
+  <!-- controles -->
   <div class="controls">
     <div class="nav-buttons">
-      <button class="nav-btn" id="prevSlide" aria-label="Slide anterior">◀</button>
-      <button class="nav-btn" id="nextSlide" aria-label="Próximo slide">▶</button>
+      <button class="nav-btn" id="prevSlide" aria-label="Anterior">◀</button>
+      <button class="nav-btn" id="nextSlide" aria-label="Próximo">▶</button>
     </div>
+    <div class="dots" id="dotsContainer"></div>
+    <div class="interactive-tip"><span>✨</span> teclas ← →</div>
+  </div>
 
-    <div class="dots" id="dotsContainer">
-      <!-- gerado via js -->
-    </div>
-
-    <div class="interactive-tip">
-      <span>✨</span> clique ou teclas ← →
-    </div>
+  <!-- BOTÕES INTERATIVOS DE TESTE -->
+  <div class="interactive-toolbar">
+    <span>🧪 Testes:</span>
+    <button class="test-btn" id="btnBgLight">☀️ Fundo claro</button>
+    <button class="test-btn" id="btnBgDark">🌙 Fundo escuro</button>
+    <button class="test-btn" id="btnBrightness">🔆 Brilho +</button>
+    <button class="test-btn" id="btnReset">↺ Reset</button>
+    <button class="test-btn" id="btnRandomColor">🎨 Cor aleatória</button>
   </div>
 
   <div class="footer">
@@ -422,9 +389,11 @@
     const counter = document.getElementById('slideCounter');
     const prevBtn = document.getElementById('prevSlide');
     const nextBtn = document.getElementById('nextSlide');
+    const card = document.getElementById('presentationCard');
 
     let currentIndex = 0;
     const totalSlides = slides.length;
+    let brightnessLevel = 1; // para controle de brilho
 
     // criar dots
     function createDots() {
@@ -441,7 +410,6 @@
       }
     }
 
-    // atualizar slide e dots
     function goToSlide(index) {
       if (index < 0) index = 0;
       if (index >= totalSlides) index = totalSlides - 1;
@@ -460,82 +428,132 @@
       counter.textContent = `${currentIndex + 1} / ${totalSlides}`;
     }
 
-    // navegação
     function nextSlide() {
-      if (currentIndex < totalSlides - 1) {
-        goToSlide(currentIndex + 1);
-      } else {
-        // loop opcional: volta ao início
-        goToSlide(0);
-      }
+      goToSlide(currentIndex + 1);
     }
 
     function prevSlide() {
-      if (currentIndex > 0) {
-        goToSlide(currentIndex - 1);
-      } else {
-        goToSlide(totalSlides - 1);
-      }
+      goToSlide(currentIndex - 1);
     }
 
-    // eventos
+    // eventos de navegação
     prevBtn.addEventListener('click', prevSlide);
     nextBtn.addEventListener('click', nextSlide);
 
-    // teclado
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        nextSlide();
-      } else if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        prevSlide();
-      }
+      if (e.key === 'ArrowRight') { e.preventDefault(); nextSlide(); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
     });
 
-    // inicializar
-    createDots();
-    goToSlide(0); // garante estado
-
-    // toque / swipe básico (mobile)
+    // swipe
     let touchStartX = 0;
-    let touchEndX = 0;
-    const card = document.querySelector('.presentation-card');
     card.addEventListener('touchstart', (e) => {
       touchStartX = e.changedTouches[0].screenX;
     }, { passive: true });
     card.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      const diff = touchStartX - touchEndX;
+      const diff = touchStartX - e.changedTouches[0].screenX;
       if (Math.abs(diff) > 40) {
-        if (diff > 0) nextSlide();
-        else prevSlide();
+        diff > 0 ? nextSlide() : prevSlide();
       }
     }, { passive: true });
 
-    // clique nas imagens (interatividade extra)
+    // ========== BOTÕES INTERATIVOS ==========
+    // 1. Fundo claro
+    document.getElementById('btnBgLight').addEventListener('click', function() {
+      card.style.background = 'linear-gradient(145deg, #f5e6d3, #e8d5c4)';
+      card.style.boxShadow = '0 30px 50px rgba(0,0,0,0.5), 0 0 0 1px #f6b83d';
+      document.querySelectorAll('.text-content p').forEach(p => {
+        p.style.background = 'rgba(255, 240, 220, 0.7)';
+        p.style.color = '#1f2a3a';
+      });
+      document.querySelectorAll('.text-content h2').forEach(h => {
+        h.style.color = '#7a4f1a';
+      });
+    });
+
+    // 2. Fundo escuro (reset com estilo)
+    document.getElementById('btnBgDark').addEventListener('click', function() {
+      card.style.background = 'linear-gradient(145deg, #0b0e1a, #0f1621)';
+      card.style.boxShadow = '0 30px 50px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,215,100,0.1)';
+      document.querySelectorAll('.text-content p').forEach(p => {
+        p.style.background = 'rgba(0, 0, 0, 0.25)';
+        p.style.color = '#d0dcec';
+      });
+      document.querySelectorAll('.text-content h2').forEach(h => {
+        h.style.color = '#ffdd99';
+      });
+    });
+
+    // 3. Brilho + (aumenta brilho das imagens)
+    document.getElementById('btnBrightness').addEventListener('click', function() {
+      brightnessLevel = Math.min(brightnessLevel + 0.25, 2.2);
+      document.querySelectorAll('.image-area img').forEach(img => {
+        img.style.filter = `brightness(${brightnessLevel})`;
+      });
+      // feedback visual
+      this.textContent = `🔆 Brilho ${brightnessLevel.toFixed(2)}x`;
+      setTimeout(() => { this.innerHTML = '🔆 Brilho +'; }, 1200);
+    });
+
+    // 4. Reset (volta ao estado original)
+    document.getElementById('btnReset').addEventListener('click', function() {
+      // reset fundo
+      card.style.background = 'linear-gradient(145deg, #151e2b, #0f1621)';
+      card.style.boxShadow = '0 30px 50px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,215,100,0.1)';
+      document.querySelectorAll('.text-content p').forEach(p => {
+        p.style.background = 'rgba(0, 0, 0, 0.25)';
+        p.style.color = '#d0dcec';
+      });
+      document.querySelectorAll('.text-content h2').forEach(h => {
+        h.style.color = '#ffdd99';
+      });
+      // reset brilho
+      brightnessLevel = 1;
+      document.querySelectorAll('.image-area img').forEach(img => {
+        img.style.filter = 'brightness(1)';
+      });
+      // reset cores aleatórias (se houver)
+      document.querySelectorAll('.slide').forEach(s => {
+        s.style.background = 'transparent';
+      });
+      this.textContent = '↺ Reset';
+    });
+
+    // 5. Cor aleatória (muda o fundo do card e dos slides)
+    document.getElementById('btnRandomColor').addEventListener('click', function() {
+      const randomColor = () => `hsl(${Math.floor(Math.random() * 360)}, 70%, 20%)`;
+      const color = randomColor();
+      card.style.background = `linear-gradient(145deg, ${color}, #0f1621)`;
+      card.style.boxShadow = `0 30px 50px rgba(0,0,0,0.7), 0 0 0 2px ${randomColor()}`;
+      // muda fundo do slide ativo
+      const activeSlide = document.querySelector('.slide.active');
+      if (activeSlide) {
+        activeSlide.style.background = `rgba(255, 215, 0, 0.05)`;
+        setTimeout(() => {
+          activeSlide.style.background = 'transparent';
+        }, 800);
+      }
+      this.textContent = '🎨 Cor aplicada!';
+      setTimeout(() => { this.innerHTML = '🎨 Cor aleatória'; }, 1000);
+    });
+
+    // Inicialização
+    createDots();
+    goToSlide(0);
+
+    // clique nas imagens (efeito de "piscar")
     document.querySelectorAll('.image-area img').forEach(img => {
       img.addEventListener('click', function() {
-        // efeito sutil: piscar leve
         this.style.transition = '0.1s';
-        this.style.filter = 'brightness(1.5)';
+        this.style.filter = 'brightness(1.8)';
         setTimeout(() => {
-          this.style.filter = 'brightness(1)';
+          this.style.filter = `brightness(${brightnessLevel})`;
         }, 150);
-        // também avança (opcional)
-        // nextSlide();  // descomente se quiser avançar ao clicar na imagem
       });
     });
 
   })();
 </script>
-
-<!-- texto adicional: a luz está presente em cada detalhe -->
-<div style="margin-top: 1.5rem; text-align: center; color: #5a6d88; font-size: 0.9rem; max-width: 700px; line-height: 1.5;">
-  <span style="background: #151e2b; padding: 0.3rem 1.4rem; border-radius: 60px; border: 1px solid #ffb34720;">
-    🌟 <strong>Interaja</strong> · use os botões, teclas ← → ou toque nas imagens
-  </span>
-</div>
 
 </body>
 </html>
